@@ -115,7 +115,6 @@ adminRouter.patch("/pet/", authenticateAdmin, async (req, res) => {
 });
 
 adminRouter.delete("/pet/", authenticateAdmin, async (req, res) => {
-  console.log(req.body)
   const petId = req.body._id;
   if (!petId) {
     res.status(400).json({
