@@ -1,9 +1,9 @@
-import express from "express";
+const express = require("express");
 
-import petModel from "../../models/petSchema.js";
-import authenticateAdmin from "../../middleware/authenticate.js";
-import { signToken } from "../../utils/authToken.js";
-import { jwtSecret } from "../../utils/secrets.js";
+const petModel = require("../../models/petSchema.js");
+const authenticateAdmin = require("../../middleware/authenticate.js");
+const { signToken } = require("../../utils/authToken.js");
+const { jwtSecret } = require("../../utils/secrets.js");
 
 
 const adminRouter = express.Router();
@@ -145,4 +145,4 @@ adminRouter.delete("/pet/", authenticateAdmin, async (req, res) => {
   }
 });
 
-export default adminRouter;
+module.exports = adminRouter;

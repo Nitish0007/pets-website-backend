@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
-import { mongoUri } from "./utils/secrets.js";
+const mongoose =  require("mongoose");
+const { mongoUri } = require("./utils/secrets.js");
 
-export function initializeDB() {
+module.exports = function initializeDB() {
     mongoose
       .connect(mongoUri, {
         useNewUrlParser: true,

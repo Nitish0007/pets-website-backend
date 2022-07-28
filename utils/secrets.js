@@ -1,6 +1,6 @@
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 dotenv.config();
 
-export const mongoUri = process.env.MONGO_URI;
-export const PORT = process.env.PORT || 8000;
-export const jwtSecret = process.env.jwtSecret;
+module.exports.mongoUri = process.env.MONGO_URI;
+module.exports.PORT = process.env.PORT || 8000;
+module.exports.jwtSecret = process.env.jwtSecret;

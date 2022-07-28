@@ -1,8 +1,8 @@
-import cors from "cors";
-import express from 'express';
-import { PORT } from "./utils/secrets.js";
-import { initializeDB } from "./db.js";
-import rootRouter from "./routes/index.js";
+const cors = require("cors");
+const express = require ('express');
+const { PORT } = require("./utils/secrets.js");
+const initializeDB = require("./db.js");
+const rootRouter = require("./routes/index.js");
 
 const app = express();
 

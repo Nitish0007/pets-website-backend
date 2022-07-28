@@ -1,4 +1,4 @@
-import { verifyToken } from "../utils/authToken.js";
+const { verifyToken } = require("../utils/authToken.js");
 
 const authenticateAdmin = async (req,res,next) => {
     try{
@@ -29,4 +29,4 @@ const authenticateAdmin = async (req,res,next) => {
 }
 }
 
-export default authenticateAdmin;
+module.exports = authenticateAdmin;

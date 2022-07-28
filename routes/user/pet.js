@@ -1,6 +1,6 @@
-import express from "express";
+const express = require("express");
 
-import petModel from "../../models/petSchema.js";
+const petModel = require("../../models/petSchema.js");
 
 const petRouter = express.Router();
 
@@ -31,4 +31,4 @@ petRouter.get("/pets", async (req,res) => {
 
 });
 
-export default petRouter;
+module.exports = petRouter;
